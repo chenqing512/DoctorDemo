@@ -13,6 +13,7 @@
 		16656FA31F61373A003D199D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16656FA11F61373A003D199D /* Main.storyboard */; };
 		16656FA51F61373A003D199D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16656FA41F61373A003D199D /* Assets.xcassets */; };
 		16656FA81F61373A003D199D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16656FA61F61373A003D199D /* LaunchScreen.storyboard */; };
+		16656FB01F613798003D199D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16656FAF1F613798003D199D /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		16656FA41F61373A003D199D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16656FA71F61373A003D199D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16656FA91F61373A003D199D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16656FAF1F613798003D199D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16656FB01F613798003D199D /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 		16656F8C1F61373A003D199D = {
 			isa = PBXGroup;
 			children = (
+				16656FAF1F613798003D199D /* StoreKit.framework */,
 				16656F971F61373A003D199D /* DoctorDemo */,
 				16656F961F61373A003D199D /* Products */,
 			);
@@ -110,6 +114,12 @@
 				TargetAttributes = {
 					16656F941F61373A003D199D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8U489QFL4J;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -265,9 +275,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DoctorDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dabai.health.yisheng.DoctorDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dabai.health.yisheng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -276,9 +287,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DoctorDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dabai.health.yisheng.DoctorDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dabai.health.yisheng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
